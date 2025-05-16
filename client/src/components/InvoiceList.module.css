@@ -1,0 +1,131 @@
+/* InvoiceList.module.css */
+
+.invoiceListContainer {
+  margin-top: 30px;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+.invoiceListTitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50; /* Darker, more modern blue-grey */
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.invoiceTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures box-shadow and border-radius apply correctly */
+}
+
+.tableHeader {
+  background-color: #f8f9fa; /* Lighter grey for header */
+  padding: 15px 12px;
+  text-align: left;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #495057; /* Darker grey text for header */
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #fdfdfd; /* Very light grey for even rows */
+}
+
+.tableRow:hover {
+  background-color: #f1f3f5; /* Light hover effect */
+}
+
+.tableCell {
+  padding: 12px 12px;
+  border-bottom: 1px solid #e9ecef; /* Lighter border for cells */
+  font-size: 0.95em;
+  color: #343a40; /* Darker text for cells */
+  vertical-align: middle;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 8px; /* Increased gap for better spacing */
+  align-items: center;
+}
+
+.actionButton {
+  padding: 8px 12px;
+  border: 1px solid transparent; /* Remove default border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  text-decoration: none;
+  display: inline-flex; /* For icon alignment if added later */
+  align-items: center;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.primaryButton {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #0069d9;
+}
+
+.secondaryButton {
+  background-color: #6c757d; /* Bootstrap secondary grey */
+  color: white;
+}
+
+.secondaryButton:hover {
+  background-color: #5a6268;
+}
+
+.dangerButton {
+  background-color: #dc3545; /* Bootstrap danger red */
+  color: white;
+}
+
+.dangerButton:hover {
+  background-color: #c82333;
+}
+
+.statusBadge {
+  padding: 5px 10px;
+  border-radius: 12px; /* Pill shape */
+  font-weight: 600;
+  color: white;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  min-width: 70px; /* Ensure badges have a decent width */
+  text-align: center;
+}
+
+.statusPaid {
+  background-color: #28a745; /* Green for Paid */
+}
+
+.statusPending {
+  background-color: #ffc107; /* Yellow for Pending */
+  color: #212529; /* Darker text for better contrast on yellow */
+}
+
+.statusFailed {
+  background-color: #dc3545; /* Red for Failed */
+}
+
+.noInvoicesMessage {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2em;
+  color: #6c757d;
+}

@@ -1,0 +1,213 @@
+/* /home/snigdha/Documents/invoice-generator-app/client/src/components/InvoiceForm.module.css */
+
+.formContainer {
+  max-width: 900px; /* Increase max-width slightly */
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.formSection {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.formSection:last-of-type {
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+.formSection h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3em;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Spacing between columns */
+  margin-bottom: 15px;
+}
+
+.formField {
+  flex: 1; /* Each field takes equal space in a row */
+  min-width: 200px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+}
+
+.formField label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.formField input[type="text"],
+.formField input[type="email"],
+.formField input[type="date"],
+.formField input[type="number"],
+.formField textarea {
+  width: 100%; /* Make input fill the container */
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in width */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.formField input:focus,
+.formField textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.formField textarea {
+  min-height: 80px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.lineItemsContainer h3 {
+   margin-bottom: 15px;
+}
+
+.lineItemRow {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 10px; /* Space between inputs */
+  align-items: center; /* Align items vertically */
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0; /* Separator for line items */
+}
+
+.lineItemRow:last-of-type {
+  border-bottom: none;
+}
+
+.lineItemField {
+  display: flex;
+  flex-direction: column; /* Stack label (if any) and input */
+}
+
+.lineItemField input { /* Inherit general input styles or define specific ones */
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+  box-sizing: border-box;
+}
+
+.lineItemField.description {
+  flex: 3; /* Description takes more space */
+  min-width: 200px;
+}
+
+.lineItemField.quantity {
+  flex: 0.5;
+  min-width: 60px;
+}
+
+.lineItemField.unitPrice {
+  flex: 1;
+  min-width: 100px;
+}
+
+.lineItemTotal {
+  flex: 0.5;
+  min-width: 70px;
+  text-align: right;
+  font-weight: 500;
+  padding: 0 10px; /* Add some padding */
+}
+
+.lineItemRemoveButton {
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: auto; /* Push button to the far right */
+}
+
+.lineItemRemoveButton:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.lineItemActions button {
+    margin-top: 15px; /* Adjusted margin */
+    margin-bottom: 20px;
+    padding: 10px 18px; /* Slightly larger padding */
+    background-color: #6c757d; /* A different color for "Add Line Item" */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lineItemActions button:hover {
+  background-color: #5a6268;
+}
+
+
+.totalAmount {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: right; /* Align total to the right */
+  color: #333;
+}
+
+.submitButton {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: block; /* Make it block level */
+  width: auto; /* Adjust width automatically */
+  margin-left: auto; /* Push to the right */
+  margin-right: 0; /* Align to the very right */
+}
+
+.submitButton:hover {
+  background-color: #357abd;
+}
+
+.error {
+  color: #d9534f;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+}
+
+.success {
+  color: #3c763d;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+}
