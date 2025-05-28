@@ -1,7 +1,7 @@
 import React, { createContext, useReducer, useEffect, useContext } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5001/api/auth'; // Your backend auth URL
+const API_URL = 'http://65.0.19.202:5001/api/auth'; // Your backend auth URL
 
 // Initial state
 const initialState = {

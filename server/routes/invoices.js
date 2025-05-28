@@ -80,7 +80,7 @@ async function generateInvoicePDF(invoice) {
 async function sendInvoiceEmail(emailTransporter, invoice, pdfBuffer, fromEmailAddress) {
   const { clientEmail, clientName, invoiceNumber, companyName, _id: invoiceId } = invoice; // Added _id as invoiceId
 
-  const clientAppUrl = process.env.CLIENT_APP_URL || 'http://localhost:5173'; // Get client app URL
+  const clientAppUrl = process.env.CLIENT_APP_URL || 'http://65.0.19.202:5173'; // Get client app URL
   const paymentUrl = `${clientAppUrl}/pay-invoice/${invoiceId}`; // Construct payment URL
 
   const mailOptions = {

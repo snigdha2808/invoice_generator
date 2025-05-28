@@ -44,7 +44,7 @@ const ViewInvoicePage = () => {
       try {
         setLoading(true);
         setError('');
-        const response = await axios.get(`http://localhost:5001/api/invoices/${invoiceId}`);
+        const response = await axios.get(`http://65.0.19.202:5001/api/invoices/${invoiceId}`);
         setInvoice(response.data);
         // Find and set the template used for this invoice
         const foundTemplate = templates.find(t => t.id === response.data.templateId);

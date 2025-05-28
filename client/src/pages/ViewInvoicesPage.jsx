@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'; // Import Link
 import InvoiceList from '../components/InvoiceList';
 
 // Assuming your backend runs on port 5001
-const API_URL = 'http://localhost:5001/api/invoices';
+const API_URL = 'http://65.0.19.202:5001/api/invoices';
 
 const ViewInvoicesPage = () => {
   const [invoices, setInvoices] = useState([]);
