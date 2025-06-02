@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import LineItemInput from './LineItemInput'; 
 
-const API_URL = 'http://65.0.19.202:5001/api/invoices';
+const API_URL = 'https://snigdhagupta.in/api/invoices';
 
 const InvoiceForm = ({ onInvoiceCreated, template, initialCompanyDetails }) => {
   const [formData, setFormData] = useState({
