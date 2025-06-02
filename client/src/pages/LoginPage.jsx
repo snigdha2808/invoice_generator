@@ -19,7 +19,8 @@ const LoginPage = () => {
       navigate('/invoices'); // Redirect to invoices list if already authenticated
     }
     if (error) {
-      alert(error); // Simple error display
+      // alert(error); // Simple error display
+      console.log(error);
       clearErrors();
     }
   }, [isAuthenticated, error, navigate, clearErrors]);
