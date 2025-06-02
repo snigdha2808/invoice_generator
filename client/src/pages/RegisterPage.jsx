@@ -24,7 +24,8 @@ const RegisterPage = () => {
       navigate('/invoices'); // Redirect to invoices list if already authenticated
     }
     if (error) {
-      alert(error); // Simple error display for now
+      // alert(error); // Simple error display for now
+      console.log(error);
       clearErrors();
     }
   }, [isAuthenticated, error, navigate, clearErrors]);
